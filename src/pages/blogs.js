@@ -4,13 +4,20 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 
 
 import PerfectScrollbar from 'react-perfect-scrollbar'
-
+export const Checkbox = () => {
+  return (
+    <div>
+      <input type="checkbox" id="checkbox" />
+      <label htmlFor="checkbox">I agree to Terms of Service </label>
+    </div>
+  )
+}
 
 const Blogs = () => {
 return (
       <div>
         <h1>You can write your blogs!</h1>
-
+        <Checkbox/>
         <PerfectScrollbar style={{width: 600, height: 400}}>
 
 
