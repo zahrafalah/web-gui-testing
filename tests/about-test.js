@@ -3,13 +3,24 @@ import pages from './pages';
 fixture('About page test').page('http://localhost:3000/about');
 
 test('Test about page', async t => {
-	// test length and width of image
-	// test the number of items in the list
+	// test the link of the about tab
 	await t
-		.expect(pages.aboutListItems.exists)
+		.expect(pages.aboutNavItem.exists)
 		.ok()
-		.expect(pages.aboutListItems.childElementCount)
-		.eql(5);
+		.expect(pages.aboutNavItem.getAttribute('href'))
+		.eql('/about');
+
+	// test length and width of image
+	await t
+		.expect(pages.aboutImage.exists)
+		.ok()
+		.expect(pages.aboutImage.clientWidth)
+		.eql(500)
+		.expect(pages.aboutImage.clientHeight)
+		.eql(600);
+
+	// test the number of items in the list
+	await t.expect(pages.aboutList.exists).ok().expect(pages.aboutList.childElementCount).eql(5);
 
 	// test that clicking the button reveals text
 	await t

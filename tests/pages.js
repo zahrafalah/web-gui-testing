@@ -8,7 +8,9 @@ class Pages {
 		this.aboutBtn = Selector('#about-btn');
 		this.abotuBtnClickedDiv = Selector('#about-btn-clicked-div');
 		this.aboutTextArea = Selector('#about-text-area');
-		this.aboutListItems = Selector('#about-list-items');
+		this.aboutList = Selector('#about-list');
+		this.aboutImage = Selector('#about-image');
+		this.aboutNavItem = Selector('a[href="/about"]');
 
 		this.toGalleryBtn = Selector('#gallery-link');
 		this.galleryHeader = Selector('#gallery-header');
