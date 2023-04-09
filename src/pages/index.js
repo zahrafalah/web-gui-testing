@@ -9,7 +9,7 @@ const Home = () => {
 return (
 	<div>
 	  <h1>Welcome to GUI Testing Website</h1>
-      <Link to="/gallery">Press to go to Gallery</Link>
+      <Link id="gallery-link" to="/gallery">Press to go to Gallery</Link>
       <br/>
       <br/>
       <img src={image} alt="Girl in a jacket" width="500" height="600"/>
