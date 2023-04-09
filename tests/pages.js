@@ -3,11 +3,12 @@ import { Selector } from 'testcafe';
 class Pages {
 	constructor() {
 		// about page
-		this.slider = Selector('.rc-slider');
-		this.sliderVal = Selector('#slider-val');
+		this.aboutSlider = Selector('.rc-slider');
+		this.aboutSliderVal = Selector('#slider-val');
 		this.aboutBtn = Selector('#about-btn');
 		this.abotuBtnClickedDiv = Selector('#about-btn-clicked-div');
 		this.aboutTextArea = Selector('#about-text-area');
+		this.aboutListItems = Selector('#about-list-items');
 
 		this.toGalleryBtn = Selector('#gallery-link');
 		this.galleryHeader = Selector('#gallery-header');

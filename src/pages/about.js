@@ -6,7 +6,7 @@ import image from './img_girl.jpg';
 function NumberList(props) {
 	const numbers = props.numbers;
 	const listItems = numbers.map(number => (
-		<li key={number} className="listitems">
+		<li key={number} id="about-list-items" className="listitems">
 			{number}
 		</li>
 	));

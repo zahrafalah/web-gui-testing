@@ -5,6 +5,12 @@ fixture('About page test').page('http://localhost:3000/about');
 test('Test about page', async t => {
 	// test length and width of image
 	// test the number of items in the list
+	await t
+		.expect(pages.aboutListItems.exists)
+		.ok()
+		.expect(pages.aboutListItems.childElementCount)
+		.eql(5);
+
 	// test that clicking the button reveals text
 	await t
 		.expect(pages.aboutBtn.exists)
@@ -28,16 +34,16 @@ test('Test about page', async t => {
 
 	// test the min and max of the slider
 	await t
-		.expect(pages.slider.exists)
+		.expect(pages.aboutSlider.exists)
 		.ok()
-		.expect(pages.sliderVal.textContent)
+		.expect(pages.aboutSliderVal.textContent)
 		.eql('5')
-		.click(pages.slider)
+		.click(pages.aboutSlider)
 		.pressKey('right')
 		.pressKey('right')
-		.expect(pages.sliderVal.textContent)
+		.expect(pages.aboutSliderVal.textContent)
 		.eql('7')
 		.pressKey('left')
-		.expect(pages.sliderVal.textContent)
+		.expect(pages.aboutSliderVal.textContent)
 		.eql('6');
 });
