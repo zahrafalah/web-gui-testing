@@ -18,10 +18,4 @@ test("My Test", async (t) => {
   await t.expect(location.x).eql(0)
   // .expect(location.y).eql(200);
 
-  // await t
-  //   .expect(elementLocation.left)
-  //   .eql(100, "Element not at correct location");
-  // await t
-  //   .expect(elementLocation.top)
-  //   .eql(200, "Element not at correct location");
 });

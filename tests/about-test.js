@@ -4,6 +4,7 @@ fixture('About test').page('http://localhost:3000/about');
 
 // Tests
 test('Test about page', async t => {
+  //
   await t
     .expect(pages.slider.exists).ok()
     .expect(pages.slider.clientWidth).eql(400)
