@@ -5,7 +5,8 @@ class Pages {
 		// about page
 		this.slider = Selector('.rc-slider');
 		this.sliderVal = Selector('#slider-val');
-		this.abotuBtnClicked = Selector('#about-btn-clicked');
+		this.aboutBtn = Selector('#about-btn');
+		this.abotuBtnClickedDiv = Selector('#about-btn-clicked-div');
 		this.aboutTextArea = Selector('#about-text-area');
 
 		this.toGalleryBtn = Selector('#gallery-link');

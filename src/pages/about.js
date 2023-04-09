@@ -56,13 +56,14 @@ const About = () => {
 			<h1>The button Element</h1>
 			<button
 				className="btn"
+				id="about-btn"
 				onClick={() => {
 					setIsClicked(!isClicked);
 				}}
 			>
 				Click Me!
 			</button>
-			{isClicked && <div id="about-btn-clicked">Button clicked</div>}
+			{isClicked && <div id="about-btn-clicked-div">Button clicked</div>}
 			<br />
 			<br />
 			<label className="label" htmlFor="text-area">

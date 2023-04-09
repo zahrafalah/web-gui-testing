@@ -6,6 +6,15 @@ test('Test about page', async t => {
 	// test length and width of image
 	// test the number of items in the list
 	// test that clicking the button reveals text
+	await t
+		.expect(pages.aboutBtn.exists)
+		.ok()
+		.click(pages.aboutBtn)
+		.expect(pages.abotuBtnClickedDiv.exists)
+		.ok()
+		.expect(pages.abotuBtnClickedDiv.textContent)
+		.eql('Button clicked');
+
 	// test that text can be added to the text area and submitted
 	await t
 		.expect(pages.aboutTextArea.exists)
