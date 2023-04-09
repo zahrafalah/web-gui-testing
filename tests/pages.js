@@ -14,6 +14,7 @@ class Pages {
 		this.contactButton = Selector('#contact-btn');
 		this.aboutList = Selector('#about-list');
 		this.textArea = Selector('#text-area');
+    this.alertDiv = Selector('alert-text')
 	}
 }
 

@@ -24,4 +24,13 @@ test("My Test", async (t) => {
 
   // Assert that the text area contains the expected value
   await t.expect(pages.textArea.value).eql('Hello, world!');
+
+  await t
+  .expect(pages.contactButton.exists)
+  .ok()
+  .click(pages.contactButton)
+  .expect(pages.alertDiv.exists)
+  .ok()
+  .expect(pages.alertDiv.textContent)
+  .eql('hello world');
 });

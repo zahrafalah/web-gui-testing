@@ -33,7 +33,7 @@ const Contact = () => {
 				id="contact-btn"
 				className="button"
 				onClick={() => {
-					alert('hello world');
+					alert(<div className="alert-text">'hello world'</div>);
 				}}
 			>
 				Click Me!
