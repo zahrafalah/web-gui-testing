@@ -2,15 +2,16 @@ import pages from './pages';
 
 fixture('Home page test').page('http://localhost:3000');
 
-test('Test home page', async t => {
+test('test the link of the home page', async t => {
 	// test the link of the home tab
 	await t
 		.expect(pages.homeNavItem.exists)
 		.ok()
 		.expect(pages.homeNavItem.getAttribute('href'))
 		.eql('/');
+});
 
-	// test the label
+test('test that the page has a label', async t => {
 	await t
 		.expect(pages.homeLabel.exists)
 		.ok()

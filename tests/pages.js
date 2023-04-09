@@ -33,6 +33,8 @@ class Pages {
 
 		// Blog page
 		this.blogLabel = Selector('#blog-label');
+		this.blogScrollBar = Selector('#blog-scroll-bar');
+		this.blogCheckbox = Selector('#blog-checkbox');
 	}
 }
 

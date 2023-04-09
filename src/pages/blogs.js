@@ -6,9 +6,9 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 export const Checkbox = () => {
 	return (
 		<div className="checkbox-container">
-			<input className="checkbox" type="checkbox" id="checkbox" />
+			<input id="blog-checkbox" className="checkbox" type="checkbox" />
 			<label id="blog-label" className="checkbox-label" htmlFor="checkbox">
-				I agree to Terms of Service{' '}
+				I agree to Terms of Service
 			</label>
 		</div>
 	);
@@ -19,7 +19,11 @@ const Blogs = () => {
 		<div>
 			<h1 className="header">You can write your blogs!</h1>
 			<Checkbox />
-			<PerfectScrollbar className="scrollbar" style={{ width: 600, height: 400 }}>
+			<PerfectScrollbar
+				id="blog-scroll-bar"
+				className="scrollbar"
+				style={{ width: 600, height: 400 }}
+			>
 				<p className="text">
 					Lorem ipsum dolor sit amet. Et nobis galisum qui voluptas fugiat est omnis amet. Id
 					voluptates tempore id enim tempora ab beatae similique et voluptas distinctio rem

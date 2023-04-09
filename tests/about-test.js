@@ -35,7 +35,7 @@ test('test that clicking the button reveals text', async t => {
 		.eql('Button clicked');
 });
 
-test('test that text can be added to the text area and submitted', async t => {
+test('test that text can be added to the text area', async t => {
 	await t
 		.expect(pages.aboutTextArea.exists)
 		.ok()
@@ -63,7 +63,7 @@ test('test the min and max of the slider', async t => {
 		.eql('6');
 });
 
-test('test the label', async t => {
+test('test that the page has a label', async t => {
 	await t
 		.expect(pages.aboutLabel.exists)
 		.ok()

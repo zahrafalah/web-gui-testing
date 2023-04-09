@@ -3,14 +3,16 @@ import pages from './pages';
 
 fixture('Contact page test').page('http://localhost:3000/contact');
 
-test('Test contact page', async t => {
+test('test the link of the contact tab', async t => {
 	// test the link of the contact tab
 	await t
 		.expect(pages.contactNavItem.exists)
 		.ok()
 		.expect(pages.contactNavItem.getAttribute('href'))
 		.eql('/contact');
+});
 
+test('Test contact page', async t => {
 	await t.expect(pages.contactButton.exists).ok();
 
 	// Check if element is at correct location
@@ -42,8 +44,9 @@ test('Test contact page', async t => {
 
 	// Assert that the text area contains the expected value
 	await t.expect(pages.textArea.value).eql('Hello, world!');
+});
 
-	// test the label
+test('test that the page has a label', async t => {
 	await t
 		.expect(pages.contactLabel.exists)
 		.ok()
