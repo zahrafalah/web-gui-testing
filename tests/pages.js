@@ -10,7 +10,11 @@ class Pages {
 		this.aboutTextArea = Selector('#about-text-area');
 		this.aboutList = Selector('#about-list');
 		this.aboutImage = Selector('#about-image');
+
+		// Nav items
 		this.aboutNavItem = Selector('a[href="/about"]');
+		this.contactNavItem = Selector('a[href="/contact"]');
+		this.hometNavItem = Selector('a[href="/"]');
 
 		this.toGalleryBtn = Selector('#gallery-link');
 		this.galleryHeader = Selector('#gallery-header');
