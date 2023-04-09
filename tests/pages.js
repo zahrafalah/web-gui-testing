@@ -7,6 +7,7 @@ class Pages {
     this.toGalleryBtn = Selector('#gallery-link');
     this.galleryHeader = Selector('#gallery-header');
     this.contactButton = Selector('#contact-btn')
+    this.textArea = Selector('#text-area');
 	}
 }
 

@@ -18,4 +18,10 @@ test("My Test", async (t) => {
   await t.expect(location.x).eql(0)
   // .expect(location.y).eql(200);
 
+
+  // Type text into the text area
+  await t.typeText(pages.textArea, 'Hello, world!');
+
+  // Assert that the text area contains the expected value
+  await t.expect(pages.textArea.value).eql('Hello, world!');
 });
