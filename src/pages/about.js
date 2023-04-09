@@ -51,7 +51,14 @@ const About = () => {
 			</div>
 
 			<NumberList numbers={numbers} />
-			<img className="image" src={image} alt="Girl in a jacket" width="500" height="600" />
+			<img
+				id="about-image"
+				className="image"
+				src={image}
+				alt="Girl in a jacket"
+				width="500"
+				height="600"
+			/>
 
 			<h1>The button Element</h1>
 			<button
