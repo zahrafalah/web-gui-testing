@@ -73,8 +73,8 @@ const About = () => {
 			{isClicked && <div id="about-btn-clicked-div">Button clicked</div>}
 			<br />
 			<br />
-			<label className="label" htmlFor="text-area">
-				Text area:
+			<label id="about-label" className="label" htmlFor="text-area">
+				About text area:
 			</label>
 			<br />
 			<br />

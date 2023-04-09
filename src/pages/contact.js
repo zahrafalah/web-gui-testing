@@ -40,8 +40,8 @@ const Contact = () => {
 			</button>
 			<br />
 			<br />
-			<label classname="label" for="text-area">
-				Review of W3Schools:
+			<label id="contact-label" classname="label" for="text-area">
+				Contact text area:
 			</label>
 			<br />
 			<br />

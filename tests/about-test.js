@@ -2,15 +2,15 @@ import pages from './pages';
 
 fixture('About page test').page('http://localhost:3000/about');
 
-test('Test about page', async t => {
-	// test the link of the about tab
+test('test the link of the about tab', async t => {
 	await t
 		.expect(pages.aboutNavItem.exists)
 		.ok()
 		.expect(pages.aboutNavItem.getAttribute('href'))
 		.eql('/about');
+});
 
-	// test length and width of image
+test('test length and width of image', async t => {
 	await t
 		.expect(pages.aboutImage.exists)
 		.ok()
@@ -18,11 +18,13 @@ test('Test about page', async t => {
 		.eql(500)
 		.expect(pages.aboutImage.clientHeight)
 		.eql(600);
+});
 
-	// test the number of items in the list
+test('test the number of items in the list', async t => {
 	await t.expect(pages.aboutList.exists).ok().expect(pages.aboutList.childElementCount).eql(5);
+});
 
-	// test that clicking the button reveals text
+test('test that clicking the button reveals text', async t => {
 	await t
 		.expect(pages.aboutBtn.exists)
 		.ok()
@@ -31,8 +33,9 @@ test('Test about page', async t => {
 		.ok()
 		.expect(pages.abotuBtnClickedDiv.textContent)
 		.eql('Button clicked');
+});
 
-	// test that text can be added to the text area and submitted
+test('test that text can be added to the text area and submitted', async t => {
 	await t
 		.expect(pages.aboutTextArea.exists)
 		.ok()
@@ -42,8 +45,9 @@ test('Test about page', async t => {
 		.typeText(pages.aboutTextArea, 'New value')
 		.expect(pages.aboutTextArea.value)
 		.eql('New value');
+});
 
-	// test the min and max of the slider
+test('test the min and max of the slider', async t => {
 	await t
 		.expect(pages.aboutSlider.exists)
 		.ok()
@@ -57,4 +61,12 @@ test('Test about page', async t => {
 		.pressKey('left')
 		.expect(pages.aboutSliderVal.textContent)
 		.eql('6');
+});
+
+test('test the label', async t => {
+	await t
+		.expect(pages.aboutLabel.exists)
+		.ok()
+		.expect(pages.aboutLabel.textContent)
+		.eql('About text area:');
 });

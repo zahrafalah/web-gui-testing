@@ -24,7 +24,9 @@ const Home = () => {
 			</button>
 			<br />
 			<br />
-			<label htmlFor="text-area">Review of W3Schools:</label>
+			<label id="home-label" htmlFor="text-area">
+				Home text area:
+			</label>
 			<br />
 			<br />
 			<textarea id="text-area" name="text-area" rows="4" cols="50"></textarea>

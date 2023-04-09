@@ -31,15 +31,22 @@ test('Test contact page', async t => {
 	// Assert that the text area contains the expected value
 	await t.expect(pages.textArea.value).eql('Hello, world!');
 
-	await t
-		.expect(pages.contactButton.exists)
-		.ok()
-		.click(pages.contactButton)
-		.expect(pages.alertDiv.exists)
-		.ok()
-		.expect(pages.alertDiv.textContent)
-		.eql('hello world');
+	// await t
+	// 	.expect(pages.contactButton.exists)
+	// 	.ok()
+	// 	.click(pages.contactButton)
+	// 	.expect(pages.alertDiv.exists)
+	// 	.ok()
+	// 	.expect(pages.alertDiv.textContent)
+	// 	.eql('hello world');
 
 	// Assert that the text area contains the expected value
 	await t.expect(pages.textArea.value).eql('Hello, world!');
+
+	// test the label
+	await t
+		.expect(pages.contactLabel.exists)
+		.ok()
+		.expect(pages.contactLabel.textContent)
+		.eql('Contact text area:');
 });

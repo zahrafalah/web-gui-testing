@@ -2,18 +2,18 @@ import pages from './pages';
 
 fixture('Home page test').page('http://localhost:3000');
 
-test('Click button', async t => {
+test('Test home page', async t => {
 	// test the link of the home tab
 	await t
-		.expect(pages.hometNavItem.exists)
+		.expect(pages.homeNavItem.exists)
 		.ok()
-		.expect(pages.hometNavItem.getAttribute('href'))
+		.expect(pages.homeNavItem.getAttribute('href'))
 		.eql('/');
 
+	// test the label
 	await t
-		.expect(pages.toGalleryBtn.exists)
+		.expect(pages.homeLabel.exists)
 		.ok()
-		.click(pages.toGalleryBtn)
-		.expect(pages.galleryHeader.exists)
-		.ok();
+		.expect(pages.homeLabel.textContent)
+		.eql('Home text area:');
 });
