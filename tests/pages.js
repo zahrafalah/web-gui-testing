@@ -10,15 +10,17 @@ class Pages {
 		this.aboutList = Selector('#about-list');
 		this.aboutSlider = Selector('.rc-slider');
 		this.aboutSliderVal = Selector('#slider-val');
+		this.aboutSubmit = Selector('#about-submit');
 		this.aboutTextArea = Selector('#about-text-area');
 
 		// Home page
 		this.homeBtn = Selector('#home-btn');
 		this.homeBtnClickedDiv = Selector('#home-btn-clicked-div');
+		this.homeGalleryBtn = Selector('#gallery-link');
 		this.homeImage = Selector('#home-image');
 		this.homeLabel = Selector('#home-label');
+		this.homeSubmit = Selector('#home-submit');
 		this.homeTextArea = Selector('#home-text-area');
-		this.homeGalleryBtn = Selector('#gallery-link');
 
 		// Nav items
 		this.aboutNavItem = Selector('a[href="/about"]');
@@ -30,13 +32,14 @@ class Pages {
 		this.galleryHeader = Selector('#gallery-header');
 
 		// Contact page
-		this.contactButton = Selector('#contact-btn');
-		this.contactLabel = Selector('#contact-label');
-		this.contactCheckBox = Selector('#contact-checkbox');
-		this.contactList = Selector('#contact-list');
-		this.contactImage = Selector('#contact-image');
 		this.contactBtn = Selector('#contact-btn');
 		this.contactBtnClickedDiv = Selector('#contact-btn-clicked-div');
+		this.contactButton = Selector('#contact-btn');
+		this.contactCheckBox = Selector('#contact-checkbox');
+		this.contactImage = Selector('#contact-image');
+		this.contactLabel = Selector('#contact-label');
+		this.contactList = Selector('#contact-list');
+		this.contactSubmit = Selector('#contact-submit');
 		this.contactTextArea = Selector('#contact-text-area');
 
 		// Blog page

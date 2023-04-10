@@ -44,7 +44,10 @@ test('test that text can be added to the text area', async t => {
 		.selectText(pages.aboutTextArea)
 		.typeText(pages.aboutTextArea, 'New value')
 		.expect(pages.aboutTextArea.value)
-		.eql('New value');
+		.eql('New value')
+		.click(pages.aboutSubmit)
+		.expect(pages.aboutTextArea.value)
+		.eql('');
 });
 
 test('test the min and max of the slider', async t => {

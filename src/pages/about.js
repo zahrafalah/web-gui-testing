@@ -92,7 +92,9 @@ const About = () => {
 						onChange={handleChange}
 					/>
 				</label>
-				<button type="submit">Submit</button>
+				<button id="about-submit" type="submit">
+					Submit
+				</button>
 			</form>
 		</div>
 	);

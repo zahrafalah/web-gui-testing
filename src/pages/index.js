@@ -58,7 +58,9 @@ const Home = () => {
 						onChange={handleChange}
 					/>
 				</label>
-				<button type="submit">Submit</button>
+				<button id="home-submit" type="submit">
+					Submit
+				</button>
 			</form>
 		</div>
 	);

@@ -1,4 +1,3 @@
-import { ClientFunction } from 'testcafe';
 import pages from './pages';
 
 fixture('Contact page test').page('http://localhost:3000/contact');
@@ -58,7 +57,10 @@ test('test that text can be added to the text area', async t => {
 		.selectText(pages.contactTextArea)
 		.typeText(pages.contactTextArea, 'New value')
 		.expect(pages.contactTextArea.value)
-		.eql('New value');
+		.eql('New value')
+		.click(pages.contactSubmit)
+		.expect(pages.contactTextArea.value)
+		.eql('');
 });
 
 test('test that the page has a label', async t => {

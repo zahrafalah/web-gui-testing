@@ -49,7 +49,10 @@ test('test that text can be added to the text area', async t => {
 		.selectText(pages.homeTextArea)
 		.typeText(pages.homeTextArea, 'New value')
 		.expect(pages.homeTextArea.value)
-		.eql('New value');
+		.eql('New value')
+		.click(pages.homeSubmit)
+		.expect(pages.homeTextArea.value)
+		.eql('');
 });
 
 test('test that the link takes you to the gallery', async t => {
