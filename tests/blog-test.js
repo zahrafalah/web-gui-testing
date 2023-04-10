@@ -33,7 +33,7 @@ test('test check box by checking and unchecking it', async t => {
 		.notOk();
 });
 
-test('test that the page has a label', async t => {
+test('test that the page has a label.', async t => {
 	await t
 		.expect(pages.blogLabel.exists)
 		.ok()
