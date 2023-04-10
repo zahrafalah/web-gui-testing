@@ -10,7 +10,7 @@ test('test the link of the about tab', async t => {
 		.eql('/about');
 });
 
-test('test length and width of image', async t => {
+test('test length and width of the image', async t => {
 	await t
 		.expect(pages.aboutImage.exists)
 		.ok()
@@ -29,9 +29,9 @@ test('test that clicking the button reveals text', async t => {
 		.expect(pages.aboutBtn.exists)
 		.ok()
 		.click(pages.aboutBtn)
-		.expect(pages.abotuBtnClickedDiv.exists)
+		.expect(pages.aboutBtnClickedDiv.exists)
 		.ok()
-		.expect(pages.abotuBtnClickedDiv.textContent)
+		.expect(pages.aboutBtnClickedDiv.textContent)
 		.eql('Button clicked');
 });
 

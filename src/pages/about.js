@@ -60,7 +60,7 @@ const About = () => {
 				height="600"
 			/>
 
-			<h1>The button Element</h1>
+			<h1>About button element</h1>
 			<button
 				className="btn"
 				id="about-btn"
@@ -78,6 +78,7 @@ const About = () => {
 			</label>
 			<br />
 			<br />
+
 			<form onSubmit={handleSubmit}>
 				<label>
 					Enter text:

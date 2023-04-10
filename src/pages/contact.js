@@ -20,24 +20,44 @@ function NumberList(props) {
 const numbers = [1, 2, 3, 4, 5];
 
 const Contact = () => {
+	const [isClicked, setIsClicked] = React.useState(false);
+	const [text, setText] = React.useState('');
+
+	const handleChange = event => {
+		setText(event.target.value);
+	};
+
+	const handleSubmit = event => {
+		event.preventDefault();
+		setText('');
+	};
+
 	return (
 		<div className="container">
-			<h1 className="header">Mail us on feedback@geeksforgeeks.org</h1>
+			<h1 className="header">Contact Page</h1>
 			<Checkbox />
 
 			<NumberList numbers={numbers} />
-			<img className="image" src={image} alt="Girl in a jacket" width="500" height="600" />
+			<img
+				id="contact-image"
+				className="image"
+				src={image}
+				alt="Girl in a jacket"
+				width="500"
+				height="600"
+			/>
 
-			<h1 className="button-header">The button Element</h1>
+			<h1 className="button-header">Contact button Element</h1>
 			<button
 				id="contact-btn"
 				className="button"
 				onClick={() => {
-					alert(<div className="alert-text">'hello world'</div>);
+					setIsClicked(!isClicked);
 				}}
 			>
 				Click Me!
 			</button>
+			{isClicked && <div id="contact-btn-clicked-div">Contact Button clicked</div>}
 			<br />
 			<br />
 			<label id="contact-label" classname="label" for="text-area">
@@ -45,7 +65,22 @@ const Contact = () => {
 			</label>
 			<br />
 			<br />
-			<textarea className="text-area" id="text-area" name="text-area" rows="4" cols="50"></textarea>
+
+			<form onSubmit={handleSubmit}>
+				<label>
+					Enter text:
+					<textarea
+						className="text-area"
+						id="contact-text-area"
+						name="text-area"
+						rows="4"
+						cols="50"
+						value={text}
+						onChange={handleChange}
+					/>
+				</label>
+				<button type="submit">Submit</button>
+			</form>
 		</div>
 	);
 };

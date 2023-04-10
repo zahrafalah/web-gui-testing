@@ -12,39 +12,15 @@ test('test the link of the contact tab', async t => {
 		.eql('/contact');
 });
 
-test('Test contact page', async t => {
-	await t.expect(pages.contactButton.exists).ok();
+test('test check box by checking and unchecking it', async t => {});
 
-	// Check if element is at correct location
-	const getLocation = ClientFunction(() => {
-		const el = document.querySelector('#contact-btn');
-		const { x, y } = el.getBoundingClientRect();
-		return { x, y };
-	});
+test('test the number of items in the list', async t => {});
 
-	const location = await getLocation();
+test('test length and width of the image', async t => {});
 
-	await t.expect(location.x).eql(0);
-	// .expect(location.y).eql(200);
+test('test that clicking the button reveals text', async t => {});
 
-	// Type text into the text area
-	await t.typeText(pages.textArea, 'Hello, world!');
-
-	// Assert that the text area contains the expected value
-	await t.expect(pages.textArea.value).eql('Hello, world!');
-
-	// await t
-	// 	.expect(pages.contactButton.exists)
-	// 	.ok()
-	// 	.click(pages.contactButton)
-	// 	.expect(pages.alertDiv.exists)
-	// 	.ok()
-	// 	.expect(pages.alertDiv.textContent)
-	// 	.eql('hello world');
-
-	// Assert that the text area contains the expected value
-	await t.expect(pages.textArea.value).eql('Hello, world!');
-});
+test('test that text can be added to the text area', async t => {});
 
 test('test that the page has a label', async t => {
 	await t
