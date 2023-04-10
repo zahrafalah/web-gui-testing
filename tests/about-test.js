@@ -32,7 +32,7 @@ test('test that clicking the button reveals text', async t => {
 		.expect(pages.aboutBtnClickedDiv.exists)
 		.ok()
 		.expect(pages.aboutBtnClickedDiv.textContent)
-		.eql('Button clicked');
+		.eql('About Button clicked');
 });
 
 test('test that text can be added to the text area', async t => {

@@ -30,10 +30,14 @@ class Pages {
 		this.galleryHeader = Selector('#gallery-header');
 
 		// Contact page
-		this.alertDiv = Selector('alert-text');
 		this.contactButton = Selector('#contact-btn');
 		this.contactLabel = Selector('#contact-label');
-		this.textArea = Selector('#text-area');
+		this.contactCheckBox = Selector('#contact-checkbox');
+		this.contactList = Selector('#contact-list');
+		this.contactImage = Selector('#contact-image');
+		this.contactBtn = Selector('#contact-btn');
+		this.contactBtnClickedDiv = Selector('#contact-btn-clicked-div');
+		this.contactTextArea = Selector('#contact-text-area');
 
 		// Blog page
 		this.blogCheckbox = Selector('#blog-checkbox');

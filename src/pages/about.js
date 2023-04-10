@@ -70,7 +70,7 @@ const About = () => {
 			>
 				Click Me!
 			</button>
-			{isClicked && <div id="about-btn-clicked-div">Button clicked</div>}
+			{isClicked && <div id="about-btn-clicked-div">About Button clicked</div>}
 			<br />
 			<br />
 			<label id="about-label" className="label" htmlFor="text-area">

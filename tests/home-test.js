@@ -58,5 +58,7 @@ test('test that the link takes you to the gallery', async t => {
 		.ok()
 		.click(pages.homeGalleryBtn)
 		.expect(pages.galleryHeader.exists)
-		.ok();
+		.ok()
+		.expect(pages.galleryHeader.textContent)
+		.eql('Gallery');
 });
